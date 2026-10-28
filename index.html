@@ -180,7 +180,7 @@
     user-select: none; 
     word-break: break-word; 
   }
-  .name:hover { color: var(--accent2); }
+  .name:hover, .name:focus { color: var(--accent2); outline: none; }
   .name.copied { color: var(--accent2); }
   .card.disabled .name { cursor: default; }
   .card.disabled .name:hover { color: #ffffff; }
@@ -271,7 +271,7 @@
   </footer>
 </div>
 
-<script src="data.js"></script>
+<script src="data.js?v=3"></script>
 <script>
 const data = window.MENU;
 const menuEl = document.getElementById('menu');
@@ -357,7 +357,7 @@ function render() {
       const copyCmd = it.name.split(/[\s\/]/)[0];
       const card = document.createElement('div');
       card.className = 'card' + (it.status === 'disabled' ? ' disabled' : '');
-      card.innerHTML = `<div class="card-top"><span class="name" data-copy="${copyCmd}" title="Click to copy ${copyCmd}">${it.name}</span><span class="cost${isFree ? ' free' : ''}">${isFree ? '' : '🎃 '}${costStr}</span></div>
+      card.innerHTML = `<div class="card-top"><span class="name" role="button" tabindex="0" data-copy="${copyCmd}" title="Click to copy ${copyCmd}">${it.name}</span><span class="cost${isFree ? ' free' : ''}">${isFree ? '' : '🎃 '}${costStr}</span></div>
         <div class="desc">${it.desc || ''}</div>
         <div class="meta">${badge(it)}${it.cooldown ? `<span class="cool">⏱ ${it.cooldown}</span>` : ''}</div>`;
       grid.appendChild(card);
@@ -386,6 +386,16 @@ menuEl.addEventListener('click', e => {
     el.classList.add('copied');
     setTimeout(() => { el.textContent = original; el.classList.remove('copied'); }, 1200);
   });
+});
+
+/* ---------- keyboard support for copying ---------- */
+menuEl.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    const el = e.target.closest('.name');
+    if (!el || el.closest('.card.disabled')) return;
+    e.preventDefault();
+    el.click(); // Triggers the click-to-copy logic above
+  }
 });
 
 function copyText(text) {
