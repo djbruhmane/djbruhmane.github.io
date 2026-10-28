@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stream Menu</title>
+<meta name="description" content="Every chat command, redeem and game on drewdj45's stream — click to copy, paste in chat, cause problems.">
+<meta name="theme-color" content="#0d0812">
+<meta property="og:title" content="drewdj45 — Stream Menu">
+<meta property="og:description" content="Every command, redeem and game. Click any command to copy it. 🎃">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎃</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&family=Creepster&display=swap" rel="stylesheet">
@@ -189,6 +195,10 @@
   .b-new { background: var(--accent2); color: var(--bg); }
   .b-updated { background: var(--accent); color: #fff; }
   .b-disabled { background: var(--muted); color: var(--bg); }
+  .b-mod { background: var(--amber); color: var(--bg); }
+  .b-off { background: var(--card2); color: var(--text); }
+  .b-vip { background: var(--accent2); color: var(--bg); }
+  .b-broadcaster { background: var(--text); color: var(--bg); }
   .cool { background: var(--card2); color: #fff; padding: 2px 8px; border-radius: 4px; }
   
   .empty { text-align: center; color: var(--muted); padding: 48px 0; font-size: 1.1rem; }
@@ -302,11 +312,18 @@ const chipsEl = document.getElementById('chips');
   chipsEl.appendChild(b);
 });
 
-/* ---------- render ---------- */
-function badge(s) {
-  if (s === 'new')      return '<span class="badge b-new">New</span>';
-  if (s === 'updated')  return '<span class="badge b-updated">Updated</span>';
-  if (s === 'disabled') return '<span class="badge b-disabled">Soon™</span>';
+/* ---------- badges: auto-detect type from the description ---------- */
+function badge(it) {
+  if (it.status === 'new')      return '<span class="badge b-new">New</span>';
+  if (it.status === 'updated')  return '<span class="badge b-updated">Updated</span>';
+  if (it.status === 'disabled') {
+    const d = (it.desc || '').toLowerCase();
+    if (d.includes('broadcaster')) return '<span class="badge b-broadcaster">Broadcaster</span>';
+    if (d.includes('mod'))         return '<span class="badge b-mod">Mod Only</span>';
+    if (d.includes('vip'))         return '<span class="badge b-vip">VIP+</span>';
+    if (d.includes('offline'))     return '<span class="badge b-off">Offline</span>';
+    return '<span class="badge b-disabled">Soon™</span>';
+  }
   return '';
 }
 
@@ -340,10 +357,9 @@ function render() {
       const copyCmd = it.name.split(/[\s\/]/)[0];
       const card = document.createElement('div');
       card.className = 'card' + (it.status === 'disabled' ? ' disabled' : '');
-      // Changed the egg to a pumpkin for Halloween!
       card.innerHTML = `<div class="card-top"><span class="name" data-copy="${copyCmd}" title="Click to copy ${copyCmd}">${it.name}</span><span class="cost${isFree ? ' free' : ''}">${isFree ? '' : '🎃 '}${costStr}</span></div>
         <div class="desc">${it.desc || ''}</div>
-        <div class="meta">${badge(it.status)}${it.cooldown ? `<span class="cool">⏱ ${it.cooldown}</span>` : ''}</div>`;
+        <div class="meta">${badge(it)}${it.cooldown ? `<span class="cool">⏱ ${it.cooldown}</span>` : ''}</div>`;
       grid.appendChild(card);
       visible++;
     });
