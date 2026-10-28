@@ -1,2 +1,2 @@
-# 2048pharmacy-afk.github.io
+# djbruhmane.github.io
 Redeem list for the Show
