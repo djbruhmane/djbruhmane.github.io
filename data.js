@@ -180,13 +180,13 @@ window.MENU = {
       ]
     },
     {
-      name: "🤖 AI Cohost (StreamLinkr)",
-      note: "I've got an AI cohost running the chat. It's powered by <b>StreamLinkr</b> — a desktop app that remembers regulars, tracks the vibe of the room, and can hold actual conversations instead of just spamming canned responses. It handles the greetings, shoutouts, and can even roast you on command. It also does hugs, slaps and bonks on request — the holy trinity. <b>All commands below are FREE unless marked as a game.</b>",
+      name: "🤖 Egg Cohost (StreamLinkr)",
+      note: "We got a cohost within chat — a buddy that remembers regulars, tracks the vibe of the room, and can hold actual conversations instead of just spamming canned responses. It handles the greetings, shoutouts, and can even roast you on command. It also does hugs, slaps and bonks on request — the holy trinity. <b>All commands below are FREE unless marked as a game.</b>",
       items: [
-        { name: "!bot", cost: "FREE", desc: "Talk to the AI cohost directly. It knows the channel lore.", cooldown: "", status: "new" },
-        { name: "!command text", cost: "FREE", desc: "Force the AI cohost to generate a sentence and say it out loud, TTS style. (Mod only — you had your chance.)", cooldown: "60s", status: "disabled" },
-        { name: "!roast @user", cost: "FREE", desc: "The AI delivers a personalised roast.", cooldown: "", status: "new" },
-        { name: "!compliment @user", cost: "FREE", desc: "The AI says something nice about you. Probably. It has been known to backhand.", cooldown: "", status: "new" },
+        { name: "!bot", cost: "FREE", desc: "Talk to the Egg cohost directly. It knows the channel lore.", cooldown: "", status: "new" },
+        { name: "!command text", cost: "FREE", desc: "Force the Egg cohost to generate a sentence and say it out loud, TTS style. (Mod only — you had your chance.)", cooldown: "60s", status: "disabled" },
+        { name: "!roast @user", cost: "FREE", desc: "The Egg delivers a personalised roast.", cooldown: "", status: "new" },
+        { name: "!compliment @user", cost: "FREE", desc: "The Egg says something nice about you. Probably. It has been known to backhand.", cooldown: "", status: "new" },
         { name: "!rank", cost: "FREE", desc: "Get your official chat rank assigned. Results may hurt.", cooldown: "", status: "new" },
         { name: "!hug @user", cost: "FREE", desc: "Wholesome virtual hug. The bot means it. Probably.", cooldown: "", status: "new" },
         { name: "!slap @user", cost: "FREE", desc: "Slap a homie with whatever the bot finds nearby. Classic chat energy.", cooldown: "", status: "new" },
