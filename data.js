@@ -16,6 +16,7 @@ window.MENU = {
   links: [
     { label: "Twitch", url: "https://www.twitch.tv/drewdj4" },
     { label: "YouTube", url: "https://www.youtube.com/channel/UCOO1k_PDmTEQT6TGnuIFuDA?sub_confirmation=1" },
+    { label: "Discord", url: "https://discord.gg/TD9dDumUR" },
   ],
 
   intro: "<b>AYO YO YO!</b> You earn <b>1 point every minute</b> you watch — as long as you're subbed and actually vibing in chat. Spend 'em on chaos below. In chat? Type <b>!c</b> or <b>!command</b> for the quick list.",
@@ -183,7 +184,8 @@ window.MENU = {
       name: "🤖 Egg Cohost (StreamLinkr)",
       note: "We got a cohost within chat — a buddy that remembers regulars, tracks the vibe of the room, and can hold actual conversations instead of just spamming canned responses. It handles the greetings, shoutouts, and can even roast you on command. It also does hugs, slaps and bonks on request — the holy trinity. <b>All commands below are FREE unless marked as a game.</b>",
       items: [
-        { name: "!bot", cost: "FREE", desc: "Talk to the Egg cohost directly. It knows the channel lore.", cooldown: "", status: "new" },
+        { name: "!commment", cost: "FREE", desc: "Talk to the Egg cohost directly. Ask on it anything you want.", cooldown: "", status: "new" },
+         { name: "!spin", cost: "FREE", desc: "Challenge Spinner Wheel.", cooldown: "", status: "new" },
         { name: "!command text", cost: "FREE", desc: "Force the Egg cohost to generate a sentence and say it out loud, TTS style. (Mod only — you had your chance.)", cooldown: "60s", status: "disabled" },
         { name: "!roast @user", cost: "FREE", desc: "The Egg delivers a personalised roast.", cooldown: "", status: "new" },
         { name: "!compliment @user", cost: "FREE", desc: "The Egg says something nice about you. Probably. It has been known to backhand.", cooldown: "", status: "new" },
@@ -195,6 +197,12 @@ window.MENU = {
         { name: "!unlurk", cost: "FREE", desc: "Back from lurk city! The bot noticed you left. It counted the minutes.", cooldown: "", status: "new" },
         { name: "!ignoreme", cost: "FREE", desc: "The bot stops responding to you. Blissful silence, on demand.", cooldown: "", status: "new" },
         { name: "!dontignoreme", cost: "FREE", desc: "Undo !ignoreme. Attention restored, regret pending.", cooldown: "", status: "new" }
+         { name: "!clip", cost: "FREE", desc: "Makes a clip on Twitch and send it to the DC", cooldown: "", status: "new" },
+        { name: "!weather", cost: "FREE", desc: "Check the weather...", cooldown: "", status: "new" },
+        { name: "!coinflip", cost: "FREE", desc: "Tell the bot you're lurking. It'll remember.", cooldown: "", status: "new" },
+        { name: "!8ball", cost: "FREE", desc: "Ponder the Ball.", cooldown: "", status: "new" },
+        { name: "!urban", cost: "FREE", desc: "Look it up on Urban Dictionary.", cooldown: "", status: "new" },
+        { name: "!stfu", cost: "FREE", desc: "Egg yapping?! Shut hin up bruh.", cooldown: "", status: "new" }
       ]
     },
     {
@@ -217,19 +225,9 @@ window.MENU = {
     },
     {
       name: "❓ Mystery Commands",
-      note: "These commands exist in the bot. What they do is between the bot and God. <b>Drew: fill in the blanks.</b>",
+      note: "These commands exist in the bot. What they do is between the bot and God.",
       items: [
-        { name: "!ao", cost: "FREE", desc: "No description available. It came with the bot. Ask Drew.", cooldown: "", status: "" },
-        { name: "!affu", cost: "FREE", desc: "Also no notes. Drew knows. Probably.", cooldown: "", status: "" },
-        { name: "!joia", cost: "FREE", desc: "Joia. That's it. That's the command.", cooldown: "", status: "" },
-        { name: "!ar", cost: "FREE", desc: "Could be anything. It's probably nothing.", cooldown: "", status: "" },
-        { name: "!hpin", cost: "FREE", desc: "HP... in? The bot knows what it means.", cooldown: "", status: "" },
-        { name: "!wongkong", cost: "FREE", desc: "Sounds like a place. Or a person. Or a problem.", cooldown: "", status: "" },
-        { name: "!warrate", cost: "FREE", desc: "War rate? Win rate? The bot declines to clarify.", cooldown: "", status: "" },
-        { name: "!triviacept", cost: "FREE", desc: "Sounds like trivia + accept. Take it up with the bot.", cooldown: "", status: "" },
-        { name: "!declinie", cost: "FREE", desc: "!decline's chaotic cousin.", cooldown: "", status: "" },
-        { name: "!login", cost: "FREE", desc: "Log in? To what? Where? Unclear. Try it and report back.", cooldown: "", status: "" },
-        { name: "!sobathon", cost: "FREE", desc: "Sob-a-thon or sub-a-thon? Drew, confirm before chat finds out.", cooldown: "", status: "" }, // ⚠ sobathon or subathon?
+        { name: "!subathon", cost: "FREE", desc: "subathon...", cooldown: "", status: "" }, // ⚠ sobathon or subathon?
         { name: "!pause", cost: "FREE", desc: "Pauses... something. The suspense is a feature.", cooldown: "", status: "" }
       ]
     },
