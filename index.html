@@ -191,6 +191,39 @@
   
   footer { text-align: center; color: var(--muted); font-size: 0.95rem; margin-top: 56px; line-height: 2; }
   footer b { color: var(--accent2); }
+
+  /* ---------- Mobile Optimizations ---------- */
+  @media (max-width: 650px) {
+    .wrap { padding: 16px 12px 60px; }
+    header { padding: 24px 0 12px; }
+    header h1 { font-size: 2.2rem; }
+    .links { gap: 8px; margin-top: 12px; }
+    .links a { padding: 4px 12px; font-size: 0.9rem; }
+    .intro { padding: 16px; font-size: 0.95rem; margin-top: 16px; }
+    
+    .controls { padding: 12px 0 10px; margin-top: 16px; }
+    #search { padding: 10px 12px; font-size: 1rem; }
+    
+    /* Horizontal scrolling for category chips on mobile */
+    .chips { 
+      flex-wrap: nowrap; 
+      overflow-x: auto; 
+      padding-bottom: 6px; 
+      -webkit-overflow-scrolling: touch; 
+      scrollbar-width: none; /* Firefox */
+    }
+    .chips::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+    .chip { flex-shrink: 0; padding: 6px 12px; font-size: 0.85rem; }
+
+    h2 { margin: 28px 0 12px; font-size: 1.4rem; }
+    
+    /* Force single-column layout */
+    .grid { grid-template-columns: 1fr; gap: 10px; }
+    
+    .card { padding: 14px; }
+    .name { font-size: 1.05rem; }
+    .desc { font-size: 0.95rem; }
+  }
 </style>
 </head>
 <body>
@@ -295,7 +328,6 @@ function render() {
     items.forEach(it => {
       const costStr = String(it.cost);
       const isFree = costStr.toUpperCase() === 'FREE';
-      /* "!sr ID/Title" -> "!sr" | "!fire A3" -> "!fire" */
       const copyCmd = it.name.split(/[\s\/]/)[0];
       const card = document.createElement('div');
       card.className = 'card' + (it.status === 'disabled' ? ' disabled' : '');
@@ -332,7 +364,6 @@ menuEl.addEventListener('click', e => {
 
 function copyText(text) {
   if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
-  /* fallback for file:// preview */
   return new Promise((resolve, reject) => {
     const ta = document.createElement('textarea');
     ta.value = text;
