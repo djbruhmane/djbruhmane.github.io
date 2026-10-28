@@ -274,8 +274,9 @@ window.MENU = {
   ],
 
   changelog: [
+    { date: "2026-10-28", text: "🎃 SPOOKY SEASON IS LIVE — Blood Moon palette deployed. The eggs are pumpkins now. Don't ask." },
     { date: "2026-10-28", text: "v2 — Massive command dump added (Blackjack, Hangman, Trivia, Slots, Fluffless Cat Arena). Mod/Offline commands are now greyed out." },
-    { date: "2026-10-28", text: "🖥️ Co-Host cohost section added. It remembers regulars and talks back." },
+    { date: "2026-10-28", text: "🥚 Egg Cohost section added. It remembers regulars and talks back." },
     { date: "2026-10-28", text: "v1 — the menu escapes Pastebin. Click-to-copy, live search, category filters, eggs." }
   ]
 };
