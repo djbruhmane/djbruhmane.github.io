@@ -16,7 +16,7 @@ window.MENU = {
   links: [
     { label: "Twitch", url: "https://www.twitch.tv/drewdj4" },
     { label: "YouTube", url: "https://www.youtube.com/channel/UCOO1k_PDmTEQT6TGnuIFuDA?sub_confirmation=1" },
-    { label: "Discord", url: "https://discord.gg/TD9dDumUR" }
+    { label: "Discord", url: "https://discord.gg/TD9dDumUR" },
   ],
 
   intro: "<b>AYO YO YO!</b> You earn <b>1 point every minute</b> you watch — as long as you're subbed and actually vibing in chat. Spend 'em on chaos below. In chat? Type <b>!c</b> or <b>!command</b> for the quick list.",
@@ -144,7 +144,7 @@ window.MENU = {
       items: [
         { name: "!8ball question", cost: "FREE", desc: "Ask the magic 8-ball. It has seen things it cannot unsee.", cooldown: "", status: "" },
         { name: "!rps @user", cost: "FREE", desc: "Rock, Paper, Scissors vs another chatter. No skill. All pride.", cooldown: "", status: "" },
-        { name: "!rollp", cost: "?", desc: "Roll for points. The dice are unsympathetic.", cooldown: "", status: "" },
+        { name: "!rollp", cost: "?", desc: "Roll for points. The dice are unsympathetic.", cooldown: "", status: "" }, // ⚠ panel looked like Mod+ — move to Mod Tools if so
         { name: "!lockflip", cost: "?", desc: "Coin flip with your points locked in. Call it in the air, coward.", cooldown: "", status: "" },
         { name: "!loan amount", cost: "?", desc: "Borrow points from the bot bank. The interest is real. So is the regret.", cooldown: "", status: "" },
         { name: "!quiz", cost: "FREE", desc: "Quick-fire quiz round. Brains optional, bragging mandatory.", cooldown: "", status: "" },
@@ -199,10 +199,10 @@ window.MENU = {
         { name: "!dontignoreme", cost: "FREE", desc: "Undo !ignoreme. Attention restored, regret pending.", cooldown: "", status: "new" },
         { name: "!clip", cost: "FREE", desc: "Makes a clip on Twitch and send it to the DC", cooldown: "", status: "new" },
         { name: "!weather", cost: "FREE", desc: "Check the weather...", cooldown: "", status: "new" },
-        { name: "!coinflip", cost: "FREE", desc: "Flip a coin.", cooldown: "", status: "new" },
+        { name: "!coinflip", cost: "FREE", desc: "Tell the bot you're lurking. It'll remember.", cooldown: "", status: "new" },
         { name: "!8ball", cost: "FREE", desc: "Ponder the Ball.", cooldown: "", status: "new" },
         { name: "!urban", cost: "FREE", desc: "Look it up on Urban Dictionary.", cooldown: "", status: "new" },
-        { name: "!stfu", cost: "FREE", desc: "Egg yapping?! Shut him up bruh.", cooldown: "", status: "new" }
+        { name: "!stfu", cost: "FREE", desc: "Egg yapping?! Shut hin up bruh.", cooldown: "", status: "new" }
       ]
     },
     {
@@ -219,14 +219,15 @@ window.MENU = {
         { name: "!followage", cost: "FREE", desc: "How long you've followed. Emotional support included.", cooldown: "", status: "" },
         { name: "!accountage", cost: "FREE", desc: "How old your account is. Boomer check.", cooldown: "", status: "" },
         { name: "!leaderboard", cost: "FREE", desc: "The egg economy leaderboard. Top of the food chain.", cooldown: "", status: "" },
-        { name: "!counters", cost: "FREE", desc: "Every channel counter and what it's counting.", cooldown: "", status: "" }
+        { name: "!counters", cost: "FREE", desc: "Every channel counter and what it's counting.", cooldown: "", status: "" },
+        { name: "!points", cost: "FREE", desc: "Check your points balance. Count those eggs.", cooldown: "", status: "" } // ⚠ Utility also lists !points as Offline — delete whichever is wrong
       ]
     },
     {
       name: "❓ Mystery Commands",
       note: "These commands exist in the bot. What they do is between the bot and God.",
       items: [
-        { name: "!subathon", cost: "FREE", desc: "subathon...", cooldown: "", status: "" },
+        { name: "!subathon", cost: "FREE", desc: "subathon...", cooldown: "", status: "" }, // ⚠ sobathon or subathon?
         { name: "!pause", cost: "FREE", desc: "Pauses... something. The suspense is a feature.", cooldown: "", status: "" }
       ]
     },
@@ -242,8 +243,10 @@ window.MENU = {
         { name: "firstrank", cost: "FREE", desc: "Shows who the first chatter was.", cooldown: "", status: "" },
         { name: "!menu", cost: "FREE", desc: "Drops a link to this very page. You're already here. Hello.", cooldown: "", status: "new" },
         { name: "!so @user", cost: "FREE", desc: "Shoutout another streamer (Mod only).", cooldown: "", status: "disabled" },
-        { name: "!points", cost: "FREE", desc: "Check your points balance.", cooldown: "", status: "" }, 
-        { name: "!giftp @user", cost: "FREE", desc: "Gift points to a homie.", cooldown: "", status: "disabled" }
+        { name: "!addpoints @user", cost: "FREE", desc: "Add points to a user (Mod only).", cooldown: "", status: "disabled" },
+        { name: "!points", cost: "FREE", desc: "Check your points balance (Offline).", cooldown: "", status: "disabled" },
+        { name: "!setpoints @user", cost: "FREE", desc: "Set a user's points (Mod only).", cooldown: "", status: "disabled" },
+        { name: "!giftp @user", cost: "FREE", desc: "Gift points (Offline).", cooldown: "", status: "disabled" }
       ]
     },
     {
@@ -261,8 +264,8 @@ window.MENU = {
         { name: "!deletequote", cost: "FREE", desc: "Delete a quote from the wall. (Broadcaster only.)", cooldown: "", status: "disabled" },
         { name: "!givetickets @user N", cost: "FREE", desc: "Hand out lotto tickets. (Broadcaster only.)", cooldown: "", status: "disabled" },
         { name: "!ticketleaderall", cost: "FREE", desc: "Full ticket leaderboard. (Broadcaster only.)", cooldown: "", status: "disabled" },
-        { name: "!givepoints @user N", cost: "FREE", desc: "Mint points out of thin air. (Broadcaster only.)", cooldown: "", status: "disabled" }, 
-        { name: "!addpoints @user N", cost: "FREE", desc: "Add points to a user. (Broadcaster only.)", cooldown: "", status: "disabled" }, 
+        { name: "!givepoints @user N", cost: "FREE", desc: "Mint points out of thin air. (Broadcaster only.)", cooldown: "", status: "disabled" },
+        { name: "!addpoints @user N", cost: "FREE", desc: "Add points to a user. (Broadcaster only.)", cooldown: "", status: "disabled" },
         { name: "!removepoints @user N", cost: "FREE", desc: "Confiscate points. The IRS of chat. (Broadcaster only.)", cooldown: "", status: "disabled" }
       ]
     }
