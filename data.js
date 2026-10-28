@@ -16,7 +16,6 @@ window.MENU = {
   links: [
     { label: "Twitch", url: "https://www.twitch.tv/drewdj4" },
     { label: "YouTube", url: "https://www.youtube.com/channel/UCOO1k_PDmTEQT6TGnuIFuDA?sub_confirmation=1" },
-    { label: "StreamLinkr", url: "https://streamlinkr.tv/" }
   ],
 
   intro: "<b>AYO YO YO!</b> You earn <b>1 point every minute</b> you watch — as long as you're subbed and actually vibing in chat. Spend 'em on chaos below. In chat? Type <b>!c</b> or <b>!command</b> for the quick list.",
