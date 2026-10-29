@@ -26,8 +26,7 @@ window.MENU = {
       name: "🎵 Music & Media",
       note: "<b>PRO-TIP:</b> YouTube links are auto-blocked in chat — just paste the <b>11-character video ID</b> instead (e.g. <i>dQw4w9WgXcQ</i>) and it queues automatically. Title + uploader name still works too!",
       items: [
-        { name: "!sr ID/Title", cost: 21, desc: "Take over as DJ! Track or playlist, no link needed.", cooldown: "", status: "" },
-        { name: "!mrs title", cost: 20, desc: "Classic song request — just like !sr.", cooldown: "", status: "" },
+        { name: "!sr ID/Title", cost: 21, desc: "Take over as DJ! Track or playlist, no link needed. Plays thru YT Music", cooldown: "", status: "" },
         { name: "!mrv title", cost: 25, desc: "Video request — same vibe, bigger screen.", cooldown: "", status: "" },
         { name: "!bump", cost: 15, desc: "Wanna skip the queue? BUMP IT!", cooldown: "", status: "" },
         { name: "!skip", cost: "?", desc: "Skip the current song or request.", cooldown: "", status: "" },
