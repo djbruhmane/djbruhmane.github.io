@@ -11,7 +11,7 @@
 
 window.MENU = {
   streamer: "drewdj45",
-  updated: "2026-10-28",
+  updated: "2026-10-29",
 
   links: [
     { label: "Twitch", url: "https://www.twitch.tv/drewdj4" },
@@ -31,7 +31,8 @@ window.MENU = {
         { name: "!bump", cost: 15, desc: "Wanna skip the queue? BUMP IT!", cooldown: "", status: "" },
         { name: "!skip", cost: "?", desc: "Skip the current song or request.", cooldown: "", status: "" },
         { name: "!Gif whatever", cost: 15, desc: "Plays a GIF of whatever you request. Yes, whatever.", cooldown: "", status: "" },
-        { name: "!GifClip whatever", cost: 20, desc: "Like !Gif, but a short video clip. Cinema.", cooldown: "", status: "" }
+        { name: "!GifClip whatever", cost: 20, desc: "Like !Gif, but a short video clip. Cinema.", cooldown: "", status: "" },
+        { name: "!pause", cost: "FREE", desc: "Pause the current track. The queue forgives.", cooldown: "", status: "disabled" }
       ]
     },
     {
@@ -43,61 +44,62 @@ window.MENU = {
         { name: "!brap", cost: 15, desc: "No description available. It speaks for itself. 💨", cooldown: "0", status: "" },
         { name: "!Hog", cost: 48, desc: "Summon Him.", cooldown: "0", status: "" },
         { name: "!bug", cost: 22, desc: "Take over my keyboard. What could possibly go wrong.", cooldown: "60sec", status: "" },
-        { name: "!brbbug", cost: "NA", desc: "Plays the bug BRB screen.", cooldown: "", status: "disabled" },
-        { name: "!brbspace", cost: "NA", desc: "Plays the space BRB screen.", cooldown: "", status: "disabled" },
         { name: "!shutup", cost: 33, desc: "I shut up for 5 minutes. Use it wisely.", cooldown: "5min per user", status: "" },
         { name: "!spooky", cost: 55, desc: "BOO!", cooldown: "", status: "" },
         { name: "!chill", cost: 26, desc: "Take a chill pill.", cooldown: "", status: "" },
         { name: "!rainbow", cost: 33, desc: "Taste the Rainbow!!!", cooldown: "120sec", status: "" },
         { name: "!dragon", cost: 33, desc: "Flame!!!", cooldown: "120sec", status: "" },
         { name: "!Chef item", cost: 32, desc: "Tutorial RIGHT NOW. Example: !chef Egg", cooldown: "", status: "" },
-        { name: "!gamer", cost: 25, desc: "Tell me how to play — style, strategy, chaos. Your call.", cooldown: "60sec", status: "" },
-        { name: "!switchgame", cost: 555, desc: "Pick a game I own and we switch. Big Boss energy.", cooldown: "", status: "" }
+        { name: "!gamer", cost: 25, desc: "Backseat me — style, strategy, chaos. Your call.", cooldown: "60sec", status: "" },
+        { name: "!switchgame", cost: 555, desc: "Pick a game I own and we switch. Big Boss energy.", cooldown: "", status: "" },
+        { name: "!brbbug", cost: "NA", desc: "Plays the bug BRB screen.", cooldown: "", status: "disabled" },
+        { name: "!brbspace", cost: "NA", desc: "Plays the space BRB screen.", cooldown: "", status: "disabled" }
       ]
     },
     {
       name: "🎡 The Wheel",
       items: [
         { name: "!spin", cost: 88, desc: "New Age Challenge wheel!!!", cooldown: "60sec", status: "" },
-        { name: "!spinner", cost: "88", desc: "Classic Spinner from OG era - Spin the Wheel! Points, media picks, host challenges, Pick-my-PFP and more. Jackpot up to +222!", cooldown: "60sec", status: "" },
+        { name: "!spinner", cost: 88, desc: "The OG spinner. Points, media picks, challenges, PFP hijacks — jackpot up to +222!", cooldown: "60sec", status: "" },
         { name: "!addSpin", cost: 5, desc: "Add YOUR idea to the wheel. Be nice. Ish.", cooldown: "5min", status: "" },
-        { name: "!wheeladd", cost: "5", desc: "Add to the wheel (alias).", cooldown: "5min", status: "" }
+        { name: "!wheeladd", cost: 5, desc: "Same as !addSpin. For the alias enjoyers.", cooldown: "5min", status: "" }
       ]
     },
     {
       name: "🎮 Games & Gambling",
       items: [
-        { name: "!bet option amount", cost: "Your bet", desc: "Wager on an option. E.g. !bet Yes 100", cooldown: "", status: "" },
+        { name: "!games", cost: "FREE", desc: "Every chat game on the menu. Window shopping is free.", cooldown: "", status: "" },
+        { name: "!bet option amount", cost: "Your bet", desc: "Put your points where your mouth is. E.g. !bet Yes 100", cooldown: "", status: "" },
         { name: "!catch", cost: 10, desc: "A wild Pokémon appears! Throw a ball, fill your Pokédex (!pokedex).", cooldown: "", status: "" },
         { name: "!pokedex", cost: "FREE", desc: "Check your caught Pokémon. Gotta catch 'em all, apparently.", cooldown: "", status: "" },
         { name: "!rob @user", cost: "20pt stake", desc: "PvP Heist! 40% chance to steal 10–20% of a lad's points (cap 200). Caught? 15pt fine. Targets need 15+ pts.", cooldown: "15 min", status: "" },
         { name: "!crime", cost: "FREE", desc: "50% chance to earn 15–40pts, 50% chance to pay a 10–25pt fine. No skill required.", cooldown: "15 min", status: "" },
-        { name: "!games", cost: "FREE", desc: "List all the available chat games.", cooldown: "", status: "" },
-        { name: "!Gamble", cost: "Your bet", desc: "Feeling lucky? The house always wins. (It does.)", cooldown: "", status: "" },
+        { name: "!Gamble", cost: "Your bet", desc: "Feeling lucky? The house always wins.", cooldown: "", status: "" },
         { name: "!scratchcard / !sc", cost: 25, desc: "Tiny odds, but every buy feeds the jackpot pool!", cooldown: "", status: "" },
-        { name: "!givepoints @user", cost: "FREE", desc: "Gift some of your points to a homie. Gotta pay the Troll toll doe", cooldown: "", status: "" }
+        { name: "!givepoints @user", cost: "FREE", desc: "Gift some of your points to a homie. Gotta pay the Troll toll doe", cooldown: "", status: "" },
+        { name: "!giftp @user", cost: "FREE", desc: "Gift points after hours. (Offline)", cooldown: "", status: "disabled" }
       ]
     },
     {
       name: "♠️ Blackjack",
-      note: "Start a game with <b>!blackjack</b>. You can play the House or duel other chatters. Standard rules apply.",
+      note: "Start with <b>!blackjack</b>. Take on the House or duel a chatter. It's 21 — you know how this works.",
       items: [
-        { name: "!blackjack", cost: "Your bet", desc: "Start a standard game of 21 against the House.", cooldown: "", status: "" },
-        { name: "!hit", cost: "FREE", desc: "Take another card.", cooldown: "", status: "" },
-        { name: "!stand", cost: "FREE", desc: "Keep your current hand.", cooldown: "", status: "" },
-        { name: "!double", cost: "FREE", desc: "Double your bet and take one more card.", cooldown: "", status: "" },
-        { name: "!split", cost: "FREE", desc: "Split a pair into two separate hands.", cooldown: "", status: "" },
-        { name: "!surrender", cost: "FREE", desc: "Forfeit the hand and lose half your bet.", cooldown: "", status: "" },
+        { name: "!blackjack", cost: "Your bet", desc: "21 against the House. Hit me.", cooldown: "", status: "" },
+        { name: "!hit", cost: "FREE", desc: "Gimme another card.", cooldown: "", status: "" },
+        { name: "!stand", cost: "FREE", desc: "I'm good. Hold.", cooldown: "", status: "" },
+        { name: "!double", cost: "FREE", desc: "Double the bet, one more card. Chest out.", cooldown: "", status: "" },
+        { name: "!split", cost: "FREE", desc: "Got a pair? Run two hands.", cooldown: "", status: "" },
+        { name: "!surrender", cost: "FREE", desc: "Bail out, keep half your bet. Coward's discount.", cooldown: "", status: "" },
         { name: "!duel @user", cost: "?", desc: "Challenge a homie to a 1v1 Blackjack duel.", cooldown: "", status: "" },
-        { name: "!accept", cost: "FREE", desc: "Accept an incoming duel request.", cooldown: "", status: "" },
-        { name: "!decline", cost: "FREE", desc: "Decline an incoming duel request.", cooldown: "", status: "" },
-        { name: "!stats", cost: "FREE", desc: "Check your personal Blackjack win/loss record.", cooldown: "", status: "" },
-        { name: "!allstats", cost: "FREE", desc: "Check the global Blackjack leaderboard.", cooldown: "", status: "" },
-        { name: "!house", cost: "?", desc: "Start a game against the House.", cooldown: "", status: "" },
-        { name: "!join", cost: "FREE", desc: "Join the current House game.", cooldown: "", status: "" },
-        { name: "!insurance", cost: "FREE", desc: "Buy insurance against a dealer Blackjack.", cooldown: "", status: "disabled" },
-        { name: "!deal", cost: "FREE", desc: "Deal a new hand.", cooldown: "", status: "disabled" },
-        { name: "!quit", cost: "FREE", desc: "Quit the current game.", cooldown: "", status: "disabled" },
+        { name: "!accept", cost: "FREE", desc: "Accept a duel.", cooldown: "", status: "" },
+        { name: "!decline", cost: "FREE", desc: "Decline a duel. Noted forever.", cooldown: "", status: "" },
+        { name: "!stats", cost: "FREE", desc: "Your W/L record. The receipts.", cooldown: "", status: "" },
+        { name: "!allstats", cost: "FREE", desc: "The global leaderboard. See who's actually good.", cooldown: "", status: "" },
+        { name: "!house", cost: "?", desc: "Open table — everyone vs the House.", cooldown: "", status: "" },
+        { name: "!join", cost: "FREE", desc: "Pull up a chair.", cooldown: "", status: "" },
+        { name: "!insurance", cost: "FREE", desc: "Side bet when the dealer's showing an Ace.", cooldown: "", status: "disabled" },
+        { name: "!deal", cost: "FREE", desc: "Deal a fresh hand.", cooldown: "", status: "disabled" },
+        { name: "!quit", cost: "FREE", desc: "Walk away from the table.", cooldown: "", status: "disabled" },
         { name: "!repeat", cost: "FREE", desc: "Repeat the last bot message.", cooldown: "", status: "disabled" },
         { name: "!resettut", cost: "FREE", desc: "Reset the tutorial (Mod only).", cooldown: "", status: "disabled" }
       ]
@@ -106,10 +108,10 @@ window.MENU = {
       name: "🪢 Hangman",
       note: "Guess the word letter by letter. <b>!g [letter]</b> to guess.",
       items: [
-        { name: "!hangman / !hm", cost: "FREE", desc: "Start a game of Hangman.", cooldown: "10min User cooldown", status: "" },
+        { name: "!hangman / !hm", cost: "FREE", desc: "Start a game. Guess wrong and the stickman gets it.", cooldown: "10min User cooldown", status: "" },
         { name: "!g [letter]", cost: "FREE", desc: "Guess a letter.", cooldown: "", status: "" },
-        { name: "!hma", cost: "FREE", desc: "Enable Hangman Addict mode for longer words.", cooldown: "", status: "" },
-        { name: "!hmr", cost: "FREE", desc: "Repeat the current Hangman board state.", cooldown: "", status: "" },
+        { name: "!hma", cost: "FREE", desc: "Addict mode. Longer words, more rope.", cooldown: "", status: "" },
+        { name: "!hmr", cost: "FREE", desc: "Re-show the board, for the latecomers.", cooldown: "", status: "" },
         { name: "!hmp", cost: "FREE", desc: "Personal Hangman stats (Offline).", cooldown: "", status: "disabled" },
         { name: "!hml", cost: "FREE", desc: "Lookup another user's Hangman stats (Offline).", cooldown: "", status: "disabled" },
         { name: "!hms", cost: "FREE", desc: "Hangman leaderboard (Offline).", cooldown: "", status: "disabled" }
@@ -117,14 +119,14 @@ window.MENU = {
     },
     {
       name: "🧠 Trivia",
-      note: "Match starts with <b>!trivia</b> or <b>!t</b>. Win points based on difficulty!",
+      note: "Start a match with <b>!trivia</b> or <b>!t</b>. Harder questions pay more.",
       items: [
-        { name: "!trivia / !t", cost: "FREE", desc: "Start a Trivia match.", cooldown: "10min User cooldown", status: "" },
-        { name: "!suggest", cost: "FREE", desc: "Suggest a question for the Trivia pool.", cooldown: "", status: "" },
+        { name: "!trivia / !t", cost: "FREE", desc: "Start a match. Brains on.", cooldown: "10min User cooldown", status: "" },
+        { name: "!suggest", cost: "FREE", desc: "Submit a question. Stump us.", cooldown: "", status: "" },
         { name: "!what", cost: 10, desc: "On-screen guesser. Winner takes the pot. Don't overthink it.", cooldown: "", status: "" },
-        { name: "!TA", cost: "FREE", desc: "Trivia Addict status/toggle.", cooldown: "", status: "" },
-        { name: "!fctrivia", cost: "FREE", desc: "Force end the current Trivia game (Mod only).", cooldown: "", status: "disabled" },
-        { name: "!skiptrivia", cost: "FREE", desc: "Skip the current Trivia question (Mod only).", cooldown: "", status: "disabled" },
+        { name: "!TA", cost: "FREE", desc: "Toggle Trivia Addict mode. Sweat optional.", cooldown: "", status: "" },
+        { name: "!fctrivia", cost: "FREE", desc: "End the current game early. (Mod only.)", cooldown: "", status: "disabled" },
+        { name: "!skiptrivia", cost: "FREE", desc: "Skip the current question. (Mod only.)", cooldown: "", status: "disabled" },
         { name: "!tstats", cost: "FREE", desc: "Personal Trivia stats (Offline).", cooldown: "", status: "disabled" },
         { name: "!tss", cost: "FREE", desc: "Search the Trivia leaderboard (Offline).", cooldown: "", status: "disabled" },
         { name: "!ttb", cost: "FREE", desc: "Top Trivia board (Offline).", cooldown: "", status: "disabled" }
@@ -142,15 +144,15 @@ window.MENU = {
       items: [
         { name: "!8ball question", cost: "FREE", desc: "Ask the magic 8-ball. It has seen things it cannot unsee.", cooldown: "", status: "new" },
         { name: "!rps @user", cost: "FREE", desc: "Rock, Paper, Scissors vs another chatter. No skill. All pride.", cooldown: "", status: "new" },
-        { name: "!rollp", cost: "?", desc: "Roll for points. The dice are unsympathetic.", cooldown: "", status: "disabled" }, // ⚠ panel looked like Mod+ — move to Mod Tools if so
-        { name: "!loan amount", cost: "?", desc: "Borrow points from the bot bank. The interest is real. So is the regret.", cooldown: "", status: "disabled" },
         { name: "!quiz", cost: "FREE", desc: "Quick-fire quiz round. Brains optional, bragging mandatory.", cooldown: "", status: "" },
         { name: "!quizleaderboard", cost: "FREE", desc: "The quiz leaderboard. Flex responsibly.", cooldown: "", status: "" },
         { name: "!challenge @user", cost: "FREE", desc: "Challenge a homie to a bot-run showdown.", cooldown: "", status: "" },
+        { name: "!mytickets", cost: "FREE", desc: "Check your lotto tickets. One of them is definitely the one.", cooldown: "", status: "" },
+        { name: "!rollp", cost: "?", desc: "Roll for points. The dice don't care.", cooldown: "", status: "disabled" }, // ⚠ panel looked like Mod+ — move to Mod Tools if so
+        { name: "!loan amount", cost: "?", desc: "Borrow points from the bot bank. The interest is real. So is the regret.", cooldown: "", status: "disabled" },
         { name: "!challengeStats", cost: "FREE", desc: "Your challenge record. Wins, losses, trauma.", cooldown: "", status: "disabled" },
-        { name: "!raffle", cost: "?", desc: "Enter the raffle. Winner picked live on stream.", cooldown: "", status: "disabled" },
-        { name: "!lotto", cost: "?", desc: "Buy a lotto ticket. Tiny odds, life-changing channel money.", cooldown: "", status: "disabled" },
-        { name: "!mytickets", cost: "FREE", desc: "Check your lotto tickets. One of them is definitely the one.", cooldown: "", status: "" }
+        { name: "!raffle", cost: "?", desc: "Enter the raffle. Winner pulled live on stream.", cooldown: "", status: "disabled" },
+        { name: "!lotto", cost: "?", desc: "Buy a lotto ticket. Tiny odds, life-changing channel money.", cooldown: "", status: "disabled" }
       ]
     },
     {
@@ -160,33 +162,32 @@ window.MENU = {
         { name: "!battleship / !bs", cost: "FREE", desc: "Start a game (or challenge someone). Man the cannons. May the best fleet win.", cooldown: "", status: "new" },
         { name: "!fire A3", cost: "FREE", desc: "Fire at a coordinate. Miss and it's just water, everywhere, forever.", cooldown: "", status: "new" },
         { name: "!fleet", cost: "FREE", desc: "See what's left of your ships. Usually: not much.", cooldown: "", status: "new" },
-        { name: "!bstats", cost: "FREE", desc: "Season scoreboard. Coded and sitting in the dry dock.", cooldown: "", status: "disabled" },
+        { name: "!bstats", cost: "FREE", desc: "Season scoreboard — still in the dry dock.", cooldown: "", status: "disabled" },
         { name: "!ballstats", cost: "FREE", desc: "All-time scoreboard. Also in the dry dock.", cooldown: "", status: "disabled" }
       ]
     },
     {
       name: "🏟️ Arena (PvP)",
-      note: "Fight other chatters or the boss. Fluffless Cat Arena is active.",
+      note: "Fight chatters or the boss. The Fluffless Cat Arena is LIVE.",
       items: [
         { name: "!fkoth", cost: "FREE", desc: "King of the Hill! Hold the crown.", cooldown: "", status: "" },
         { name: "!fpvp @user", cost: "FREE", desc: "1v1 fight — shows on stream. Square up.", cooldown: "", status: "" },
-        { name: "!battle", cost: "FREE", desc: "Challenge another chatter to a duel.", cooldown: "", status: "" },
-        { name: "!fboss", cost: "?", desc: "Challenge the Fluffless Cat Arena boss.", cooldown: "", status: "" },
-        { name: "!fuser", cost: "?", desc: "Check your Fluffless Cat Arena character profile.", cooldown: "", status: "" },
-        { name: "!freset", cost: "?", desc: "Reset your Fluffless Cat Arena character.", cooldown: "", status: "" },
+        { name: "!battle", cost: "FREE", desc: "Duel a chatter. Loser eats chat.", cooldown: "", status: "" },
+        { name: "!fboss", cost: "?", desc: "Fight the Arena boss. It does not go easy.", cooldown: "", status: "" },
+        { name: "!fuser", cost: "?", desc: "Your Arena fighter card.", cooldown: "", status: "" },
+        { name: "!freset", cost: "?", desc: "Wipe your Arena fighter. Fresh start, same mistakes.", cooldown: "", status: "" },
         { name: "!fstop", cost: "FREE", desc: "Stop the current Arena fight (Mod only).", cooldown: "", status: "disabled" }
       ]
     },
     {
       name: "🤖 Egg Cohost (StreamLinkr)",
-      note: "We got a cohost within chat — a buddy that remembers regulars, tracks the vibe of the room, and can hold actual conversations instead of just spamming canned responses. It handles the greetings, shoutouts, and can even roast you on command. It also does hugs, slaps and bonks on request — the holy trinity. <b>All commands below are FREE unless marked as a game.</b>",
+      note: "We got a cohost living in chat. It remembers the regulars, reads the room, and talks back — greetings, shoutouts, roasts on demand, plus the holy trinity: hugs, slaps, bonks. <b>Everything below is FREE unless marked as a game.</b>",
       items: [
-        { name: "!commment", cost: "FREE", desc: "Talk to the Egg cohost directly. Ask on it anything you want.", cooldown: "", status: "new" },
-        { name: "!spin", cost: "FREE", desc: "Challenge Spinner Wheel.", cooldown: "", status: "new" },
-        { name: "!command text", cost: "FREE", desc: "Force the Egg cohost to generate a sentence and say it out loud, TTS style. (Mod only — you had your chance.)", cooldown: "60s", status: "disabled" },
-        { name: "!roast @user", cost: "FREE", desc: "The Egg delivers a personalised roast.", cooldown: "", status: "new" },
-        { name: "!compliment @user", cost: "FREE", desc: "The Egg says something nice about you. Probably. It has been known to backhand.", cooldown: "", status: "new" },
-        { name: "!rank", cost: "FREE", desc: "Get your official chat rank assigned. Results may hurt.", cooldown: "", status: "new" },
+        { name: "!commment", cost: "FREE", desc: "Talk to the Egg directly. Ask it anything — it has opinions.", cooldown: "", status: "new" },
+        { name: "!spin", cost: "FREE", desc: "Challenge Wheel. Free spins, but at a cost.", cooldown: "", status: "new" },
+        { name: "!roast @user", cost: "FREE", desc: "The Egg roasts you. It knows you better than you know you.", cooldown: "", status: "new" },
+        { name: "!compliment @user", cost: "FREE", desc: "The Egg says something nice. Might be backhanded. No refunds.", cooldown: "", status: "new" },
+        { name: "!rank", cost: "FREE", desc: "The Egg assigns your official chat rank. Results may hurt.", cooldown: "", status: "new" },
         { name: "!hug @user", cost: "FREE", desc: "Wholesome virtual hug. The bot means it. Probably.", cooldown: "", status: "new" },
         { name: "!slap @user", cost: "FREE", desc: "Slap a homie with whatever the bot finds nearby. Classic chat energy.", cooldown: "", status: "new" },
         { name: "!bonk @user", cost: "FREE", desc: "BONK. Straight to jail. (The horny jail is self-serve.)", cooldown: "", status: "new" },
@@ -194,12 +195,13 @@ window.MENU = {
         { name: "!unlurk", cost: "FREE", desc: "Back from lurk city! The bot noticed you left. It counted the minutes.", cooldown: "", status: "new" },
         { name: "!ignoreme", cost: "FREE", desc: "The bot stops responding to you. Blissful silence, on demand.", cooldown: "", status: "new" },
         { name: "!dontignoreme", cost: "FREE", desc: "Undo !ignoreme. Attention restored, regret pending.", cooldown: "", status: "new" },
-        { name: "!clip", cost: "FREE", desc: "Makes a clip on Twitch and send it to the DC", cooldown: "", status: "new" },
-        { name: "!weather", cost: "FREE", desc: "Check the weather...", cooldown: "", status: "new" },
-        { name: "!coinflip", cost: "FREE", desc: "Tell the bot you're lurking. It'll remember.", cooldown: "", status: "new" },
+        { name: "!clip", cost: "FREE", desc: "Clips the moment and yeets it to Discord.", cooldown: "", status: "new" },
+        { name: "!weather", cost: "FREE", desc: "Ask the Egg about the weather.", cooldown: "", status: "new" },
+        { name: "!coinflip", cost: "FREE", desc: "Heads or tails. The fairest fight in chat.", cooldown: "", status: "new" },
         { name: "!8ball", cost: "FREE", desc: "Ponder the Ball.", cooldown: "", status: "new" },
-        { name: "!urban", cost: "FREE", desc: "Look it up on Urban Dictionary.", cooldown: "", status: "new" },
-        { name: "!stfu", cost: "FREE", desc: "Egg yapping?! Shut hin up bruh.", cooldown: "", status: "new" }
+        { name: "!urban", cost: "FREE", desc: "Urban Dictionary, via the Egg. Educational-ish.", cooldown: "", status: "new" },
+        { name: "!stfu", cost: "FREE", desc: "Egg yapping? Shut him up bruh.", cooldown: "", status: "new" },
+        { name: "!command text", cost: "FREE", desc: "Make the Egg say anything, out loud. (Mod only — you had your chance.)", cooldown: "60s", status: "disabled" }
       ]
     },
     {
@@ -208,16 +210,16 @@ window.MENU = {
       items: [
         { name: "!help", cost: "FREE", desc: "The bot explains itself. A rarity among bots.", cooldown: "", status: "" },
         { name: "!weather", cost: "FREE", desc: "Weather check. Touch grass vicariously.", cooldown: "", status: "" },
-        { name: "!urban term", cost: "FREE", desc: "Urban Dictionary lookup. Educational. Allegedly. (VIP+ and up.)", cooldown: "", status: "disabled" },
-        { name: "!define word", cost: "FREE", desc: "Real dictionary definition. Edu-ma-cation.", cooldown: "", status: "disabled" },
-        { name: "!convert amount", cost: "FREE", desc: "Unit & currency converter. Math, but automated.", cooldown: "", status: "disabled" },
         { name: "!firstseen", cost: "FREE", desc: "When you first appeared in this chat. Your origin story.", cooldown: "", status: "" },
         { name: "!topchatter", cost: "FREE", desc: "The loudest legends this channel has produced.", cooldown: "", status: "" },
         { name: "!followage", cost: "FREE", desc: "How long you've followed. Emotional support included.", cooldown: "", status: "" },
         { name: "!accountage", cost: "FREE", desc: "How old your account is. Boomer check.", cooldown: "", status: "" },
         { name: "!leaderboard", cost: "FREE", desc: "The egg economy leaderboard. Top of the food chain.", cooldown: "", status: "" },
-        { name: "!counters", cost: "FREE", desc: "Every channel counter and what it's counting.", cooldown: "", status: "" },
-        { name: "!points", cost: "FREE", desc: "Check your points balance. Count those eggs.", cooldown: "", status: "" } // ⚠ Utility also lists !points as Offline — delete whichever is wrong
+        { name: "!counters", cost: "FREE", desc: "Everything we're counting. Yes, we keep count.", cooldown: "", status: "" },
+        { name: "!points", cost: "FREE", desc: "Check your points balance. Count those eggs.", cooldown: "", status: "" },
+        { name: "!urban term", cost: "FREE", desc: "Urban Dictionary lookup. Educational. Allegedly. (VIP+ and up.)", cooldown: "", status: "disabled" },
+        { name: "!define word", cost: "FREE", desc: "Real dictionary definition. Edu-ma-cation.", cooldown: "", status: "disabled" },
+        { name: "!convert amount", cost: "FREE", desc: "Unit & currency converter. Math, but automated.", cooldown: "", status: "disabled" }
       ]
     },
     {
@@ -231,19 +233,13 @@ window.MENU = {
       name: "🛠️ Utility",
       items: [
         { name: "!note text", cost: "FREE", desc: "Slap a note onto the stream overlay. Multilingual: !postit, !notiz, !merken.", cooldown: "", status: "new" },
-        { name: "!shownotes", cost: "FREE", desc: "See all the notes currently on screen.", cooldown: "", status: "new" },
+        { name: "!shownotes", cost: "FREE", desc: "Everything currently stuck on screen.", cooldown: "", status: "new" },
         { name: "!delnote", cost: "FREE", desc: "Delete a specific note. (aka !radier)", cooldown: "", status: "new" },
         { name: "!clearnotes", cost: "FREE", desc: "Nuke ALL notes. Fresh slate. (Mods only, ya gremlins).", cooldown: "", status: "new" },
-        { name: "!q / !look", cost: "FREE", desc: "Chat lookup. Searches history and profiles.", cooldown: "", status: "" },
-        { name: "!s", cost: "FREE", desc: "Suggest whatever you want and it'll be sent to the Discord channel. Don't forget to join!", cooldown: "10sec", status: "" },
-        { name: "firstrank", cost: "FREE", desc: "Shows who the first chatter was.", cooldown: "", status: "" },
-        { name: "!menu", cost: "FREE", desc: "Drops a link to this very page. You're already here. Hello.", cooldown: "", status: "new" },
-        { name: "!so @user", cost: "FREE", desc: "Shoutout another streamer (Mod only).", cooldown: "", status: "disabled" },
-        { name: "!addpoints @user", cost: "FREE", desc: "Add points to a user (Mod only).", cooldown: "", status: "disabled" },
-        { name: "!points", cost: "FREE", desc: "Check your points balance (fixed).", cooldown: "", status: "" },
-        { name: "!setpoints @user", cost: "FREE", desc: "Set a user's points (Mod only).", cooldown: "", status: "disabled" },
-        { name: "!giftp @user", cost: "FREE", desc: "Gift points (Offline).", cooldown: "", status: "disabled" },
-         { name: "!pause", cost: "FREE", desc: "Pauses the current song over SR.", cooldown: "", status: "disabled" }
+        { name: "!q / !look", cost: "FREE", desc: "Search chat history and profiles. The receipts are kept.", cooldown: "", status: "" },
+        { name: "!s", cost: "FREE", desc: "Suggest anything — lands straight in the Discord. You joined, right?", cooldown: "10sec", status: "" },
+        { name: "!firstrank", cost: "FREE", desc: "The first chatter this channel ever had. Certified OG.", cooldown: "", status: "" },
+        { name: "!menu", cost: "FREE", desc: "Drops a link to this very page. You're already here. Hello.", cooldown: "", status: "new" }
       ]
     },
     {
@@ -253,7 +249,7 @@ window.MENU = {
         { name: "!tts text", cost: "FREE", desc: "The bot's TTS voice on demand. (Broadcaster only.) Viewers: use the !TTS redeem in Chaos.", cooldown: "", status: "disabled" },
         { name: "!info", cost: "FREE", desc: "Bot and channel info dump. (Mod only.)", cooldown: "", status: "disabled" },
         { name: "!stats", cost: "FREE", desc: "Bot stats. Numbers go up. (Mod only.)", cooldown: "", status: "disabled" },
-        { name: "!recap", cost: "FREE", desc: "AI recap of the stream so far. (Mod only.)", cooldown: "", status: "disabled" },
+        { name: "!recap", cost: "FREE", desc: "Recap of the stream so far. For mods who tabbed out. (Mod only.)", cooldown: "", status: "disabled" },
         { name: "!resetwheel", cost: "FREE", desc: "Reset the Challenge Wheel. (Mod only.)", cooldown: "", status: "disabled" },
         { name: "!resetcounter counter", cost: "FREE", desc: "Reset a counter to zero. (Mods only.)", cooldown: "", status: "disabled" },
         { name: "!setcounter counter N", cost: "FREE", desc: "Set a counter to any value. (Mods only.)", cooldown: "", status: "disabled" },
@@ -263,7 +259,9 @@ window.MENU = {
         { name: "!ticketleaderall", cost: "FREE", desc: "Full ticket leaderboard. (Broadcaster only.)", cooldown: "", status: "disabled" },
         { name: "!givepoints @user N", cost: "FREE", desc: "Mint points out of thin air. (Broadcaster only.)", cooldown: "", status: "disabled" },
         { name: "!addpoints @user N", cost: "FREE", desc: "Add points to a user. (Broadcaster only.)", cooldown: "", status: "disabled" },
-        { name: "!removepoints @user N", cost: "FREE", desc: "Confiscate points. The IRS of chat. (Broadcaster only.)", cooldown: "", status: "disabled" }
+        { name: "!removepoints @user N", cost: "FREE", desc: "Confiscate points. The IRS of chat. (Broadcaster only.)", cooldown: "", status: "disabled" },
+        { name: "!setpoints @user", cost: "FREE", desc: "Set a user's points directly. (Mod only.)", cooldown: "", status: "disabled" },
+        { name: "!so @user", cost: "FREE", desc: "Shoutout another streamer. (Mod only.)", cooldown: "", status: "disabled" }
       ]
     }
   ],
